@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
@@ -11,42 +13,52 @@
     <meta property="og:description" content="contacts of very very small project">
     <meta property="og:image" content="https://github.com/YanchikSivova/my_awesome_project/raw/main/assets/image.png">
 </head>
+
 <body>
-    <header>
-        <a href="/">Сайтик моего проекта</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container header__container">
+            <a class="header__logo" href="/">Сайтик моего проекта</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="page">
         <!-- Простые "хлебные крошки" -->
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>Контакты</span>
+        <nav class="navigation" aria-label="Хлебные крошки">
+            <a class="navigation__last" href="index.html">Главная</a> →
+            <span class="navigation__current">Контакты</span>
         </nav>
-        <h1>Наши контакты</h1>
-        <section>
-            <h2>Сивова Яна Максимовна</h2>
-            <ul>
-                <li>Телефон: +мяу(мяу)мяу-мяу-мяу</li>
-                <li>Почта: мяумяу@мяу.мяу</li>
+        <h1 class="page__title">Наши контакты</h1>
+        <section class="person">
+            <h2 class="person__header">Сивова Яна Максимовна</h2>
+            <ul class="person__list">
+                <li class="person__inf">Телефон: +мяу(мяу)мяу-мяу-мяу</li>
+                <li class="person__inf">Почта: мяумяу@мяу.мяу</li>
             </ul>
         </section>
-        <section>
-            <h2>Ещё кто-нибудь</h2>
-            <ul>
-                <li>Телефон: +мур(мур)мур-мур-мур</li>
-                <li>Почта: мурмур@мур.мур</li>
+        <section class="person">
+            <h2 class="person__header">Ещё кто-нибудь</h2>
+            <ul class="person__list">
+                <li class="person__inf">Телефон: +мур(мур)мур-мур-мур</li>
+                <li class="person__inf">Почта: мурмур@мур.мур</li>
             </ul>
         </section>
-    </main> 
-    <footer>
-        <p>&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
+        <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
+
 </html>
