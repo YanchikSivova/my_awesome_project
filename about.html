@@ -2,51 +2,62 @@
 <html lang="ru">
 
 <head>
-    ... <!-- Скопируйте весь блок <head> из index.html -->
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас - Сайтик моего проекта</title>
+    <title>О нас</title>
     <meta name="description" content="about very very small project">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-     <meta property="og:type" content="website">
-    <meta property="og:title" content="О нас - Сайтик моего проекта">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="О нас">
     <meta property="og:description" content="learn more about very small project">
     <meta property="og:image" content="https://github.com/YanchikSivova/my_awesome_project/raw/main/assets/image.png">
 </head>
-</head>
 
 <body>
-    <header>
-        ... <!-- Скопируйте весь блок <header> из index.html -->
-        <a href="/">Сайтик моего проекта</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container header__container">
+            <a class="header__logo" href="/">Сайтик моего проекта</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="page">
         <!-- Простые "хлебные крошки" -->
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>О нас</span>
+        <nav class="navigation" aria-label="Хлебные крошки">
+            <a class="navigation__last" href="index.html">Главная</a> →
+            <span class="navigation__current">О нас</span>
         </nav>
-        <h1>О нашей компании</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Текст о том, как все начиналось...</p>
+        <h1 class="page__title">О нашей компании</h1>
+        <section class="about">
+            <h2 class="about__header">Наша история</h2>
+            <p class="about__text">Текст о том, как все начиналось...</p>
         </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Текст о команде...</p>
+        <section class="our-team">
+            <h2 class="our-team__header">Наша команда</h2>
+            <div class="our-team__videos">
+                <video class="our-team__video" controls poster="assets/oxy-preview.jpg">
+                    <source src="assets/oxy-video.mp4" type="video/mp4">
+                </video>
+                <h3 class="our-team__member">Наш сотрудник Окси!</h3>
+            </div>
+            <p class="our-team__text">Текст о команде...</p>
         </section>
     </main>
-    <footer>
-        ... <!-- Скопируйте весь блок <footer> из index.html -->
-        <p>&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
+        <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
 

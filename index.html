@@ -16,83 +16,115 @@
 </head>
 
 <body>
-    <!-- Шапка сайта-->
-    <header>
-        <a href="/">Сайтик моего проекта</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container header__container">
+            <a class="header__logo" href="/">Сайтик моего проекта</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- Уникальное основное содержимое страницы -->
-    <main>
-        <h1>Добро пожаловать на наш сайт!</h1>
+    <main class="page">
+        <h1 class="page__title">Добро пожаловать на наш сайт!</h1>
         <!-- Секция 1 с якорем -->
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>Описание предоставляемых услуг...</p>
-            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
+        <section class="services">
+            <h2 class="services__header">Наши услуги</h2>
+            <p class="services__description">Описание предоставляемых услуг...</p>
+            <a class="services__contacts" href="#contacts">Связаться с нами</a>
+            <!-- Якорная ссылка внутри страницы -->
         </section>
         <!-- Секция 2 с якорем -->
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Примеры наших работ...</p>
+        <section class="portfolio">
+            <h2 class="portfolio__header">Портфолио</h2>
+            <p class="portfolio__description">Примеры наших работ...</p>
+            <div class="portfolio__gallery">
+                <div class="portfolio__item">
+                    <img class="portfolio__image" src="assets/portfolio-1.jpg" alt="Кошка - рысь!">
+                    <h3 class="portfolio__item-title">Кошка Пуся расслабленная!</h3>
+                </div>
+                <div class="portfolio__item">
+                    <img class="portfolio__image" src="assets/portfolio-2.jpg" alt="Кошка - рысь!">
+                    <h3 class="portfolio__item-title">Кошка Пуся злая!</h3>
+                </div>
+                <div class="portfolio__item">
+                    <img class="portfolio__image" src="assets/portfolio-3.jpg" alt="Кошка - рысь!">
+                    <h3 class="portfolio__item-title">Кошка Пуся смущенная!</h3>
+                </div>
+            </div>
         </section>
         <!-- Секция 3 с якорем -->
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Наши контакты...</p>
-            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
+        <section class="contacts" id="contacts">
+            <h2 class="contacts__header">Контактная информация</h2>
+            <p class="contacts__description">Наши контакты...</p>
+            <a class="contacts__link" href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
         </section>
         <!--Секция 4 форма обратной связи-->
-        <section id="feedback">
-            <h2>Поделитесь своим мнением</h2>
-            <button id="openDialog" type="button">Написать нам</button>
-            <dialog id="contactDialog" aria-labelledby="dialogTitle">
-                <h2 id="dialogTitle">Обратная связь</h2>
+        <section class="feedback" id="feedback">
+            <div class="container">
+                <h2 class="feedback__title">Поделитесь своим мнением</h2>
+                <button id="openDialog" type="button">Написать нам</button>
 
-                <form id="contactForm" method="dialog" novalidate>
-                    <label for="name">Имя</label>
-                    <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
-
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" required autocomplete="email">
-
-                    <label for="phone">Телефон</label>
-                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
-                        aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__" required
-                        pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
-                    <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
-
-                    <label for="date">Дата</label>
-                    <input id="date" name="date" type="date">
-
-                    <label for="topic">Тема</label>
-                    <select id="topic" name="topic" required>
-                        <option value="">Выберете тему</option>
-                        <option>Вопрос</option>
-                        <option>Жалоба</option>
-                    </select>
-
-                    <label for="message">Сообщение</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <div class="form-actions">
-                        <button type="button" id="closeDialog">Закрыть</button>
-                        <button type="submit">Отправить</button>
+                <dialog id="contactDialog" aria-labelledby="dialogTitle">
+                    <h2 id="dialogTitle">Обратная связь</h2>
+                    <div class="dialog__content">
+                        <form id="contactForm" method="dialog" novalidate>
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input id="name" name="name" type="text" required minlength="2"
+                                    autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" type="email" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                                    aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__" required
+                                    pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                                <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Дата</label>
+                                <input id="date" name="date" type="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="topic">Тема</label>
+                                <select id="topic" name="topic" required>
+                                    <option value="">Выберете тему</option>
+                                    <option>Вопрос</option>
+                                    <option>Жалоба</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" id="closeDialog">Закрыть</button>
+                                <button type="submit">Отправить</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </dialog>
+                </dialog>
+            </div>
         </section>
     </main>
     <!-- Подвал сайта -->
-    <footer>
-        <p>&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Сайтик моего проекта. Все права защищены.</p>
+        <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
-
 </html>
